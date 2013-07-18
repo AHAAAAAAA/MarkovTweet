@@ -3,11 +3,12 @@ from markov_class import *
 from keys import *
 import twitter
 
-script, inputfile = argv
+script = argv
+inputfile = argv
 
 def main():
-    order = int(raw_input("What Markov order would you like to use (1-10)? But try number 2."))
-    handle = raw_input("Please enter a Twitter handle.")
+    order = int(2)
+    handle = "HandleHEre"
 
     filetext = process_file()
 
@@ -21,7 +22,7 @@ def main():
 
 # prompt to open file
 def process_file():
-    f = open(inputfile)
+    f = open("blake.txt")
     # read through the file
     filetext = f.read()
     f.close()
@@ -29,10 +30,10 @@ def process_file():
 
 # Put your keys into "DO_ME_twitter_keys" file and rename the file to "keys.py"
 def tweet_output(output):
-    api = twitter.Api(consumer_key='key_consumer_key',
-                      consumer_secret='key_consumer_secret',
-                      access_token_key='key_access_token_key',
-                      access_token_secret='key_access_token_secret')
+    api = twitter.Api(consumer_key='ConsumerKeyHere',
+                      consumer_secret='ConsumerSecretHere',
+                      access_token_key='AccessTokenHere',
+                      access_token_secret='AccessTokenSecretHere')
 
     status = api.PostUpdate(output)
 
