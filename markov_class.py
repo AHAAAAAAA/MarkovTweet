@@ -33,7 +33,7 @@ class MarkovDict(object):
 
 # find the most frequent seed
     def define_seed(self):
-        maximum = 0
+        maximum = 2
 
         for seed in self.seed_counts:
             if len(self.seed_counts[seed]) > maximum:
@@ -45,12 +45,12 @@ class MarkovDict(object):
     def output_text(self):
 
         start_seed = self.define_seed()
-        size = len(" ".join(start_seed))
-
+        size = len(" ".join(start_seed)) 
+        
 # TODO Replace the handle with a twitter handle you would like to send your Markov
 # text to. Also, would be nice to prompt the user for a twitter handle...eventually.
         output_list = list(start_seed)
-        twitter_handle = handle
+        twitter_handle = "YourTwitterHandle"
 
         while(True):
             if size > self.output_count:
@@ -60,8 +60,8 @@ class MarkovDict(object):
                 random_index = random.randint(0, len(self.seed_counts[start_seed]) -1) # generate a random number constrained by size of the list
 
                 output_list.append(self.seed_counts[start_seed][random_index]) # add new character to the output string
-                size += (1 + len(self.seed_counts[start_seed][random_index]))
+                size += (2+len(self.seed_counts[start_seed][random_index]))
                 start_seed = tuple(output_list[-self.order:])
 
-        return twitter_handle + " ".join(output_list)[0:self.output_count]
+        return " ".join(output_list)[7:self.output_count]
 
