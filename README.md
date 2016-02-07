@@ -7,7 +7,7 @@ To use:
 * python Markov_Tweet.py 
 
 
-Essentially, this bot differs from the original in that it's designed to emulate existing Twitter users effortlessly. No need to compile training data or multi-step procedures. Given the handle, it will autodump the last 3240 of that user in csv, remove retweets and convert it into a text file. It will then run the Markov Chain model on it and automatically tweet the result out to the account detailed in keys.py.
+Essentially, this bot differs from the original in that it's designed to emulate existing Twitter users effortlessly. No need to compile training data or multi-step procedures. Given the handle, it will autodump the last 3240 of that user in csv, remove retweets+mentions, convert it into a text file, feed into a MCMC model and tweet a single status to your account. It will then run the Markov Chain model on it and automatically tweet the result out to the account detailed in keys.py.
 
 This can be modified to emulate the last emulated user, skipping the tweetdump and conversions, by commenting out lines 19-20. Add to your CronJob to run regularly as a bot once setup on certain data. (Please don't tweetdump daily)
 
