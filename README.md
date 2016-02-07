@@ -1,4 +1,4 @@
-Builds off [Roger Whitson](https://github.com/rogerwhitson/Markov-Tweet)'s work in [Markov-Tweet](https://github.com/rogerwhitson/Markov-Tweet). Updated to automate, simplify, and ease adoption. Also, allows for Arabic text.
+Builds off [Roger Whitson](https://github.com/rogerwhitson/Markov-Tweet)'s work in [Markov-Tweet](https://github.com/rogerwhitson/Markov-Tweet). Updated to automate and simplify the process of creating a bot as well as replace now-defunct libraries. Also, allows for Arabic text.
 
 To use:
 * pip install tweepy
