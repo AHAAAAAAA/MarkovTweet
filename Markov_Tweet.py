@@ -11,9 +11,8 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
 api = tweepy.API(auth)
 
-outputf = "result.txt"
 def main():
-    #Change Order
+    #Order of model - Tweak for better/worse results
     order = int(2)
     handle = "jack" #Put handle you want to emulate here
     get_all_tweets(handle) #COMMENT THIS OUT TO JUST READ FROM LAST READ USER
