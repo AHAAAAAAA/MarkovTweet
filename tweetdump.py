@@ -46,7 +46,7 @@ def get_all_tweets(screen_name):
 	outtweets = [[tweet.id_str, tweet.created_at, tweet.text.encode("utf-8")] for tweet in alltweets]
 	
 	#write the csv	
-	with open('tweets.csv' % screen_name, 'wb') as f:
+	with open('tweets.csv', 'wb') as f:
 		writer = csv.writer(f)
 		writer.writerow(["id","created_at","text"])
 		writer.writerows(outtweets)

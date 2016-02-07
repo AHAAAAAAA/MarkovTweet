@@ -6,7 +6,9 @@ def csvtotext (file, out):
 	data = list(DictReader(open(file, 'r')))
 	output = open(out, 'w')
 	txt= []
-	sys.stdout = 'tweets.txt'
+	print "converting csv to txt"
+	sys.stdout = output
 	for x in data:
 		if "RT" and "@" not in x['text']:
 			print x['text']
+	sys.stdout = sys.__stdout__
